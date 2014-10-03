@@ -1,0 +1,19 @@
+<!doctype html>
+<html ng-app="birthday-corkboard">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Birthdays</title>
+   <link rel="stylesheet" href="component/bootstrap/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/style.css">
+   <script src="component/angularjs/angular.min.js"></script>
+   <script src="js/core.js"></script>
+</head>
+<body ng-controller="birthdayCorkboardController">
+   <div>
+      <div ng-repeat="birthday in birthdays">
+         <p>{{birthday.name}} {{birthday.birthday}}<p>
+      </div>
+   </div>
+</body>
+</html>
