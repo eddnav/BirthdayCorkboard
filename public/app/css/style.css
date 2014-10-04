@@ -2,3 +2,161 @@ body {
 	margin: 0px;
 	background: url(../img/cork_texture.jpg) repeat;
 }
+
+.centered {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.big-text {
+  font-size: 9em;
+}
+
+#nav-border-bar {
+  position: fixed;
+  width: 100%;
+  height: 4.5em;
+  background-image: url(../img/wood_texture.jpg);
+  box-shadow: 0px 2px 30px black;
+  font-family: 'Permanent Marker', cursive;
+  z-index: 999;
+}
+
+#nav-panel {
+  height: 4.5em;
+  width: 100%;
+}
+
+#nav-panel:hover .nav-month-button {
+  opacity: 1;
+}
+
+.nav-month-button {
+  height: 3em;
+  width: 3em;
+  color: white;
+  position: relative;
+  opacity: 0.2;
+  display: table-cell;
+  transition: opacity 0.5s;
+}
+
+.nav-month-button:hover .nav-icon {
+  font-size: 1.5em;
+}
+
+.nav-icon {
+  font-size: 1.1em;
+  color: #3A0707;
+  display: inline-block;
+  vertical-align: middle;
+  transition: font-size 0.1s;
+}
+
+.nav-block {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.long {
+  width: 70%;
+}
+
+.circled {
+  border-radius: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.engraved-title {
+  text-align: center;
+  font-size: 3em;
+  color: #3A0707;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, .3), 0px -1px 0px rgba(0, 0, 0, .7);
+}
+
+#cork {
+  padding: 7em 0.3em 0.3em 0.3em;
+}
+
+.row {
+  margin: 0px;
+}
+
+/* Note */
+
+.note-container {
+  overflow: hidden;
+  margin: auto;
+  display: table;
+}
+
+.note:before {
+  content: "";
+  background-color: #3095DE;
+  box-shadow: 0px 1px 4px black;
+  width: 20px;
+  height: 20px;
+  display: block;
+  border-radius: 100%;
+  margin: 5px auto 5px auto;
+}
+
+.note {
+  padding: 5px;
+  background-color: #EB1EBD;
+  box-shadow: 0px 4px 20px black;
+  margin: 0 0 1em 0;
+  width: 300px;
+  float: left;
+  display: block;
+}
+
+.note-ink {
+  color: white;
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.padded-note-content {
+  padding: 1em;
+}
+
+@media (min-width: 768px) { 
+
+  .note-container {
+    overflow: hidden;
+    margin: auto;
+    display: block;
+  }
+
+  .note:before {
+    content: "";
+    background-color: #3095DE;
+    box-shadow: 0px 1px 4px black;
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-radius: 100%;
+    margin: 5px auto 5px auto;
+  }
+
+  .note {
+    padding: 5px;
+    background-color: #EC3939;
+    box-shadow: 0px 4px 20px black;
+    margin-bottom: 1em;
+    width: 100%;
+  }
+
+  .note-ink {
+    color: white;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+  }
+
+  .padded-note-content {
+    padding: 1em;
+  }
+}

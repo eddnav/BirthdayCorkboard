@@ -1,19 +1,52 @@
 <!doctype html>
-<html ng-app="birthday-corkboard">
-<head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Birthdays</title>
-   <link rel="stylesheet" href="component/bootstrap/dist/css/bootstrap.min.css">
-   <link rel="stylesheet" href="css/style.css">
-   <script src="component/angularjs/angular.min.js"></script>
-   <script src="js/core.js"></script>
-</head>
-<body ng-controller="birthdayCorkboardController">
-   <div>
-      <div ng-repeat="birthday in birthdays">
-         <p>{{birthday.name}} {{birthday.birthday}}<p>
+<html ng-app="birthdayCorkboard" ng-controller="BirthdayController">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href='img/favicon.ico' type="image/x-icon">
+    <title ng-bind="title">Birthdays</title>
+    <link rel="stylesheet" href="component/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+    <script src="component/platform/platform.js"></script>
+    <link rel="import" href="component/paper-ripple/paper-ripple.html">
+    <script src="component/angularjs/angular.min.js"></script>
+    <script src="js/core.js"></script>
+    <script src="js/controller/birthdayController.js"></script>
+    <script src="js/service/birthday.js"></script>
+  </head>
+  <body>
+    <nav id="nav-border-bar">
+      <div class="centered" id="nav-panel">
+       <div class="nav-block">
+          <div class="nav-month-button circled" ng-click="previousMonth()">
+            <span class="nav-icon glyphicon glyphicon-chevron-left"></span>
+            <paper-ripple fit class="circle recenteringTouch"></paper-ripple>
+          </div>
+        </div>
+        <div class="nav-block long">
+          <span class="engraved-title">{{ getMonthName(month) }}</span>
+        </div>
+        <div class="nav-block">
+          <div class="nav-month-button circled" ng-click="nextMonth()">
+            <span class="nav-icon glyphicon glyphicon-chevron-right"></span>
+            <paper-ripple fit class="circle recenteringTouch"></paper-ripple>
+          </div>
+        </div>
       </div>
-   </div>
-</body>
+    </nav>
+    <div id="cork">
+      <div class="row">
+        <div ng-repeat="birthday in birthdays | month:month">
+          <div class="col-sm-6 col-md-3 note-container">
+            <div class="note">
+              <div class="note-ink big-text">{{ getMonthDay(birthday.birthday) }}</div>
+              <div class="note-ink padded-note-content">{{ birthday.name }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
