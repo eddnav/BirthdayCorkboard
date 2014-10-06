@@ -38,7 +38,7 @@
     </nav>
     <div id="cork">
       <div class="row">
-        <div ng-repeat="birthday in birthdays | month:month">
+        <div ng-repeat="birthday in birthdays | month:month | orderByDay">
           <div class="col-sm-6 col-md-3 note-container">
             <div class="note">
               <div class="note-ink big-text">{{ getMonthDay(birthday.birthday) }}</div>

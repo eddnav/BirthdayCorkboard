@@ -21,8 +21,7 @@ angular.module 'birthdayCorkboard'
         when 11 then 'December'
 
     $scope.getMonthDay = (date) ->
-      new Date(parseInt date, 10).getDate()
-
+      new Date(date).getDate()
 
     changeTitle = ->
       $scope.title = "#{$scope.getMonthName($scope.month)}'s Birthdays"
@@ -51,8 +50,18 @@ angular.module 'birthdayCorkboard'
     (birthdays, month) ->
       filtered = []
       for birthday in birthdays
-        date = new Date(parseInt birthday.birthday, 10)
+        date = new Date(birthday.birthday)
         if date.getMonth() == month
           filtered.push birthday
       console.log 'Filtered by month'
       filtered
+
+  .filter 'orderByDay', ->
+    (birthdays) ->
+      filtered = birthdays
+      compare = (a, b) ->
+        if new Date(a.birthday).getDate() > new Date(b.birthday).getDate()
+          1
+        else
+          -1
+      filtered.sort compare

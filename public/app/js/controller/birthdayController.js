@@ -32,7 +32,7 @@
       }
     };
     $scope.getMonthDay = function(date) {
-      return new Date(parseInt(date, 10)).getDate();
+      return new Date(date).getDate();
     };
     changeTitle = function() {
       return $scope.title = "" + ($scope.getMonthName($scope.month)) + "'s Birthdays";
@@ -63,13 +63,26 @@
       filtered = [];
       for (_i = 0, _len = birthdays.length; _i < _len; _i++) {
         birthday = birthdays[_i];
-        date = new Date(parseInt(birthday.birthday, 10));
+        date = new Date(birthday.birthday);
         if (date.getMonth() === month) {
           filtered.push(birthday);
         }
       }
       console.log('Filtered by month');
       return filtered;
+    };
+  }).filter('orderByDay', function() {
+    return function(birthdays) {
+      var compare, filtered;
+      filtered = birthdays;
+      compare = function(a, b) {
+        if (new Date(a.birthday).getDate() > new Date(b.birthday).getDate()) {
+          return 1;
+        } else {
+          return -1;
+        }
+      };
+      return filtered.sort(compare);
     };
   });
 
