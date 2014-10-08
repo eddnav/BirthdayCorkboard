@@ -40,6 +40,7 @@
       <div class="row">
         <div ng-repeat="birthday in birthdays | month:month | orderByDay">
           <div class="col-sm-6 col-md-3 note-container">
+          <div class="note-wrap">
             <div class="note">
               <div class="note-ink big-text">{{ getMonthDay(birthday.birthday) }}</div>
               <div class="note-ink padded-note-content">{{ birthday.name }}</div>
