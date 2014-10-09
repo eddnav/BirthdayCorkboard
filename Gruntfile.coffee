@@ -15,10 +15,18 @@ module.exports = (grunt) ->
         dest: 'public/app/js/',
         ext: '.js'
 
+    sass:
+      dist:
+        files:
+          'public/app/css/style.css': 'public/src/sass/style.scss'
+
     watch:
-      w_coffee:
+      coffee_src:
         files: 'public/src/coffee/**/*.coffee'
         tasks: 'coffee'
+      sass_src:
+        files: 'public/src/sass/style.scss'
+        tasks: 'sass'
 
     nodemon: 
       dev: 

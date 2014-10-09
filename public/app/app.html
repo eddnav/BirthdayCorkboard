@@ -3,24 +3,25 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href='img/favicon.ico' type="image/x-icon">
     <title ng-bind="title">Birthdays</title>
-    <link rel="stylesheet" href="component/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
     <script src="component/platform/platform.js"></script>
-    <link rel="import" href="component/paper-ripple/paper-ripple.html">
     <script src="component/angularjs/angular.min.js"></script>
     <script src="js/core.js"></script>
     <script src="js/controller/birthdayController.js"></script>
     <script src="js/service/birthday.js"></script>
+    <link rel="icon" href='img/favicon.ico' type="image/x-icon">
+    <link href="component/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+    <link href="component/paper-ripple/paper-ripple.html" rel="import">
+    <link href="element/birthday-pinned-note/birthday-pinned-note.html" rel="import">
   </head>
   <body>
     <nav id="nav-border-bar">
-      <div class="centered" id="nav-panel">
+      <div id="nav-panel">
        <div class="nav-block">
-          <div class="nav-month-button circled" ng-click="previousMonth()">
+          <div class="nav-month-button" ng-click="previousMonth()">
             <span class="nav-icon glyphicon glyphicon-chevron-left"></span>
             <paper-ripple fit class="circle recenteringTouch"></paper-ripple>
           </div>
@@ -29,7 +30,7 @@
           <span class="engraved-title">{{ getMonthName(month) }}</span>
         </div>
         <div class="nav-block">
-          <div class="nav-month-button circled" ng-click="nextMonth()">
+          <div class="nav-month-button" ng-click="nextMonth()">
             <span class="nav-icon glyphicon glyphicon-chevron-right"></span>
             <paper-ripple fit class="circle recenteringTouch"></paper-ripple>
           </div>
@@ -39,12 +40,8 @@
     <div id="cork">
       <div class="row">
         <div ng-repeat="birthday in birthdays | month:month | orderByDay">
-          <div class="col-sm-6 col-md-3 note-container">
-          <div class="note-wrap">
-            <div class="note">
-              <div class="note-ink big-text">{{ getMonthDay(birthday.birthday) }}</div>
-              <div class="note-ink padded-note-content">{{ birthday.name }}</div>
-            </div>
+          <div class="col-sm-6 col-md-3 grid-element-container">
+            <birthday-pinned-note day="{{ getMonthDay(birthday.birthday) }}" name="{{ birthday.name }}" background="{{ birthday.background }}" animation="{{ birthday.animation }}"></birthday-pinned-note>
           </div>
         </div>
       </div>

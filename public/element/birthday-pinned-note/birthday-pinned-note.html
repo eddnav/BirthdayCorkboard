@@ -1,0 +1,14 @@
+<link href="../../component/polymer/polymer.html" rel="import">
+
+<polymer-element name="birthday-pinned-note" attributes="day name background animation">
+  <template>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <div class="note-wrap">
+      <div class="note {{ background }} {{ animation }}">
+        <div class="note-ink big-text">{{ day }}</div>
+        <div class="note-ink padded-note-content">{{ name }}</div>
+      </div>
+    </div>
+  </template>
+  <script src="js/birthday-pinned-note.js"></script>
+</polymer-element>

@@ -1,0 +1,107 @@
+// Path
+$img: "../img";
+
+// Font
+$font-permanent-marker: 'Permanent Marker', cursive;
+
+// Color
+$engraved-wood: #3A0707;
+
+// Dimen
+$nav-height: 4.5em;
+$nav-month-button-size: 3em;
+
+body {
+  margin: 0px;
+  background: url(#{$img}/cork_texture.jpg) repeat;
+}
+
+@mixin centered {
+  text-align: center;
+  vertical-align: middle;
+}
+
+@mixin circled {
+  border-radius: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.long {
+  width: 70%;
+}
+
+#nav-border-bar {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: $nav-height;
+  font-family: $font-permanent-marker;
+  background-image: url(#{$img}/wood_texture.jpg);
+  box-shadow: 0px 2px 30px black;
+}
+
+#nav-panel {
+  @include centered;
+  width: 100%;
+  height: $nav-height;
+}
+
+#nav-panel:hover {
+  .nav-month-button {
+    opacity: 1;
+  }
+}
+
+.nav-month-button {
+  @include circled;
+  display: table-cell;
+  position: relative;
+  width: $nav-month-button-size;
+  height: $nav-month-button-size;
+  color: white;
+  opacity: 0.2;
+  transition: opacity 0.5s;
+}
+
+.nav-month-button:hover {
+  .nav-icon {
+    font-size: 1.5em;
+  }
+}
+
+.nav-icon {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.1em;
+  color: $engraved-wood;
+  transition: font-size 0.1s;
+}
+
+.nav-block {
+  @include centered;
+  display: inline-block;
+}
+
+.engraved-title {
+  text-align: center;
+  font-size: 3em;
+  color: #3A0707;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, .3), 0px -1px 0px rgba(0, 0, 0, .7);
+}
+
+#cork {
+  padding: 7em 0.3em 0.3em 0.3em;
+}
+
+.row {
+  margin: 0px;
+}
+
+.grid-element-container {
+  margin: auto;
+  display: table;
+  @media (min-width: 768px) { 
+    display: block;
+  }
+}

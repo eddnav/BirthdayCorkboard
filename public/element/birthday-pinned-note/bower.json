@@ -1,0 +1,21 @@
+{
+  "name": "birthday-pinned-note",
+  "version": "0.0.1",
+  "authors": [
+    "Edd <eddnav@gmail.com>"
+  ],
+  "description": "A configurable pinned note for the birthday-corkboard app",
+  "main": "birthday-pinned-note.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.4.2"
+  }
+}
