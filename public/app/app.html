@@ -39,10 +39,13 @@
     </nav>
     <div id="cork">
       <div class="row">
-        <div ng-repeat="birthday in birthdays | month:month | orderByDay">
+        <div ng-repeat="birthday in filteredBirthdays = (birthdays | month:month | orderByDay)">
           <div class="col-sm-6 col-md-3 grid-element-container">
             <birthday-pinned-note day="{{ getMonthDay(birthday.birthday) }}" name="{{ birthday.name }}" background="{{ birthday.background }}" animation="{{ birthday.animation }}"></birthday-pinned-note>
           </div>
+        </div>
+        <div class="empty-container" ng-hide="filteredBirthdays.length">
+          <span class="empty">No birthdays this month!</span>
         </div>
       </div>
     </div>

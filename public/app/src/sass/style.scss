@@ -22,9 +22,9 @@ body {
 }
 
 @mixin circled {
-  border-radius: 100%;
   text-align: center;
   vertical-align: middle;
+  border-radius: 100%;
 }
 
 .long {
@@ -104,4 +104,18 @@ body {
   @media (min-width: 768px) { 
     display: block;
   }
+}
+
+.empty-container {
+  text-align: center;
+}
+
+.empty {
+  width: 65%;
+  padding: 5px;
+  text-align: center;
+  font-size: 3em;
+  font-family: $font-permanent-marker;
+  background-color: white;
+  box-shadow: 0px 4px 20px black;
 }
