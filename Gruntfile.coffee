@@ -10,7 +10,7 @@ module.exports = (grunt) ->
       glob_to_multiple:
         expand: true,
         flatten: false,
-        cwd: 'public/src/coffee/',
+        cwd: 'public/app/src/coffee/',
         src: ['**/*.coffee'],
         dest: 'public/app/js/',
         ext: '.js'
@@ -18,14 +18,14 @@ module.exports = (grunt) ->
     sass:
       dist:
         files:
-          'public/app/css/style.css': 'public/src/sass/style.scss'
+          'public/app/css/style.css': 'public/app/src/sass/style.scss'
 
     watch:
       coffee_src:
-        files: 'public/src/coffee/**/*.coffee'
+        files: 'public/app/src/coffee/**/*.coffee'
         tasks: 'coffee'
       sass_src:
-        files: 'public/src/sass/style.scss'
+        files: 'public/app/src/sass/style.scss'
         tasks: 'sass'
 
     nodemon: 

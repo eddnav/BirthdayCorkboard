@@ -4,7 +4,7 @@ express = require('express')
 bodyParser  = require('body-parser')
 app = express()
 
-app.use '/src', express.static __dirname + '/public/src/'
+app.use '/src', express.static __dirname + '/public/app/src/'
 app.use '/element', express.static __dirname + '/public/element/'
 app.use '/component', express.static __dirname + '/public/component/'
 app.use '/css', express.static __dirname + '/public/app/css'
