@@ -21,7 +21,7 @@
     <nav id="nav-border-bar">
       <div id="nav-panel">
        <div class="nav-block">
-          <div class="nav-month-button" ng-click="previousMonth()">
+          <div class="nav-month-button" ng-click="previousMonth()" ng-show="month > 0">
             <span class="nav-icon glyphicon glyphicon-chevron-left"></span>
             <paper-ripple fit class="circle recenteringTouch"></paper-ripple>
           </div>
@@ -30,7 +30,7 @@
           <span class="engraved-title">{{ getMonthName(month) }}</span>
         </div>
         <div class="nav-block">
-          <div class="nav-month-button" ng-click="nextMonth()">
+          <div class="nav-month-button" ng-click="nextMonth()" ng-show="month < 11">
             <span class="nav-icon glyphicon glyphicon-chevron-right"></span>
             <paper-ripple fit class="circle recenteringTouch"></paper-ripple>
           </div>
