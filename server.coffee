@@ -38,4 +38,8 @@ mongoClient.connect 'mongodb://corkadmin:corkpassword@ds043190.mongolab.com:4319
                   res.send(birthdays);
                   console.log 'Request fulfilled'
 
+    app.use (req, res) ->
+      res.sendFile '404.html', sendOptions
+      console.log 'Not found'
+
     server = app.listen process.env.PORT or 5000, -> console.log 'Listening on port %d', server.address().port
