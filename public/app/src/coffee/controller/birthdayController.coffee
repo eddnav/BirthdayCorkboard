@@ -21,7 +21,10 @@ angular.module 'birthdayCorkboard'
         when 11 then 'December'
 
     $scope.getMonthDay = (date) ->
-      new Date(date).getDate()
+      if date
+        new Date(date).getDate()
+      else
+        date
 
     changeTitle = ->
       $scope.title = "#{$scope.getMonthName($scope.month)}'s Birthdays"

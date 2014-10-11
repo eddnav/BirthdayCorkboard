@@ -1,5 +1,8 @@
 Polymer
   day: '?',
   name: '?',
-  background: 'red'
-  animation: 'drop-tilted-right'
+  noteOptions:
+    background: 'red',
+    texture: 'no-texture',
+    special: 'no-special',
+    animation: 'drop-tilted-right'

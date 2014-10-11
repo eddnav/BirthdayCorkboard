@@ -1,6 +1,14 @@
+// Path
+$img: "../img";
+
 // Color
 $red: #F2542B;
 $blue: #3095DE;
+$green: #008304;
+$yellow: #E2AC00;
+$pink: #EC1D6D;
+$brown: #821B00;
+$light-blue: #14E9F5;
 $gold: #EEC81E;
 
 .note-wrap {
@@ -33,6 +41,8 @@ $gold: #EEC81E;
   }
 }
 
+// Note colors
+
 .red {
   background-color: $red;
 }
@@ -41,8 +51,62 @@ $gold: #EEC81E;
   background-color: $blue;
 }
 
+.green {
+  background-color: $green;
+}
+
+.yellow {
+  background-color: $yellow;
+}
+
+.pink {
+  background-color: $pink;
+}
+
+.brown {
+  background-color: $brown;
+}
+
+.black {
+  background-color: black;
+}
+
+.white {
+  background-color: white;
+}
+
+// Texture
+
+.no-teture {
+
+}
+
+.crown {
+  background-image: url(#{$img}/crown.png);
+}
+
+// Special
+
+.no-special {
+
+}
+
+// Animations
+
 .drop {
   -webkit-animation: drop 1 ease-in 0.3s;
+}
+
+.drop-tilted-right {
+  -webkit-animation: drop-tilted-right 1 ease-in 0.3s forwards;
+}
+
+.drop-tilted-right-glow {
+  -webkit-animation: glow infinite ease-in 1.3s, drop-tilted-right 1 ease-in 0.3s forwards;
+}
+
+.drop-tilted-left {
+  -webkit-animation: drop-tilted-left 1 ease-in 0.3s forwards;
 }
 
 @-webkit-keyframes drop {
@@ -54,9 +118,19 @@ $gold: #EEC81E;
   } 
 }
 
-.drop-tilted-right {
-  -webkit-animation: drop-tilted-right 1 ease-in 0.3s;
-  -webkit-animation-fill-mode: forwards;
+@-webkit-keyframes glow {
+  0% {
+   box-shadow: 0px 4px 20px black, 0px 0px 0px $light-blue;
+  }
+  35% {
+    box-shadow: 0px 4px 20px black, 0px 0px 40px 10px $light-blue;
+  }
+  65% {
+    box-shadow: 0px 4px 20px black, 0px 0px 40px 10px white;
+  }
+  100% {
+    box-shadow: 0px 4px 20px black, 0px 0px 0px white;
+  } 
 }
 
 @-webkit-keyframes drop-tilted-right {
@@ -66,11 +140,6 @@ $gold: #EEC81E;
   100% {
     transform: translateZ(0px) rotate(2deg);  
   } 
-}
-
-.drop-tilted-left {
-  -webkit-animation: drop-tilted-left 1 ease-in 0.3s;
-  -webkit-animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes drop-tilted-left {

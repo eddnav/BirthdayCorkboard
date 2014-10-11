@@ -31,27 +31,58 @@
 .blue {
   background-color: #3095DE; }
 
+.green {
+  background-color: #008304; }
+
+.yellow {
+  background-color: #E2AC00; }
+
+.pink {
+  background-color: #EC1D6D; }
+
+.brown {
+  background-color: #821B00; }
+
+.black {
+  background-color: black; }
+
+.white {
+  background-color: white; }
+
+.crown {
+  background-image: url(../img/crown.png); }
+
 .drop {
   -webkit-animation: drop 1 ease-in 0.3s; }
+
+.drop-tilted-right {
+  -webkit-animation: drop-tilted-right 1 ease-in 0.3s forwards; }
+
+.drop-tilted-right-glow {
+  -webkit-animation: glow infinite ease-in 1.3s, drop-tilted-right 1 ease-in 0.3s forwards; }
+
+.drop-tilted-left {
+  -webkit-animation: drop-tilted-left 1 ease-in 0.3s forwards; }
 
 @-webkit-keyframes drop {
   0% {
     transform: translateZ(200px); }
   100% {
     transform: translateZ(0px); } }
-.drop-tilted-right {
-  -webkit-animation: drop-tilted-right 1 ease-in 0.3s;
-  -webkit-animation-fill-mode: forwards; }
-
+@-webkit-keyframes glow {
+  0% {
+    box-shadow: 0px 4px 20px black, 0px 0px 0px #14E9F5; }
+  35% {
+    box-shadow: 0px 4px 20px black, 0px 0px 40px 10px #14E9F5; }
+  65% {
+    box-shadow: 0px 4px 20px black, 0px 0px 40px 10px white; }
+  100% {
+    box-shadow: 0px 4px 20px black, 0px 0px 0px white; } }
 @-webkit-keyframes drop-tilted-right {
   0% {
     transform: translateZ(200px) rotate(2deg); }
   100% {
     transform: translateZ(0px) rotate(2deg); } }
-.drop-tilted-left {
-  -webkit-animation: drop-tilted-left 1 ease-in 0.3s;
-  -webkit-animation-fill-mode: forwards; }
-
 @-webkit-keyframes drop-tilted-left {
   0% {
     transform: translateZ(200px) rotate(-2deg); }

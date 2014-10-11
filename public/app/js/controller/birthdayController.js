@@ -32,7 +32,11 @@
       }
     };
     $scope.getMonthDay = function(date) {
-      return new Date(date).getDate();
+      if (date) {
+        return new Date(date).getDate();
+      } else {
+        return date;
+      }
     };
     changeTitle = function() {
       return $scope.title = "" + ($scope.getMonthName($scope.month)) + "'s Birthdays";
@@ -87,5 +91,3 @@
   });
 
 }).call(this);
-
-//# sourceMappingURL=birthdayController.js.map

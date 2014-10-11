@@ -23,5 +23,3 @@
   });
 
 }).call(this);
-
-//# sourceMappingURL=birthday.js.map
