@@ -3,7 +3,7 @@ birthday-corkboard
 
 A simple birthday corkboard that shows birthdays as sticky notes. Uses MongoDB, Node.js and Angular.js.
 
-notes
+Notes
 -----
 
 Every note is a custom element I made while learning Polymer, ie:
