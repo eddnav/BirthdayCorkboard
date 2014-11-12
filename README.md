@@ -6,7 +6,7 @@ A simple birthday corkboard that shows birthdays as sticky notes. Uses MongoDB, 
 notes
 -----
 
-Every note are a custom element I made while learning Polymer, ie:
+Every note is a custom element I made while learning Polymer, ie:
 
 ```<birthday-pinned-note day="26" name="Eduardo" noteoptions="{"background": "red",'animation': "drop-tilted-left"}"></birthday-pinned-note>```
 
