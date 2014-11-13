@@ -5,7 +5,7 @@ A simple birthday corkboard that shows birthdays as sticky notes. Uses MongoDB, 
 
 Demo
 ----
-Here's a [demo](http://birthday-corkboard-001.herokuapp.com), it's practically empty, but you can see my birthday on september.
+Here's a [demo](http://birthday-corkboard-001.herokuapp.com). It's practically empty, but you can see my birthday on september.
 
 Notes
 -----
@@ -20,7 +20,7 @@ Every note is a custom element I made while learning Polymer, ie:
 </birthday-pinned-note>
 ```
 
-* **birthday**: the birthday's day of the month.
+* **birthday**: the birthday.
 
 * **name**: name of the birthday guy/gal.
 
