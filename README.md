@@ -1,7 +1,7 @@
 birthday-corkboard
 ==================
 
-A simple birthday corkboard that shows birthdays as sticky notes. Uses MongoDB, Node.js and Angular.js.
+A simple birthday corkboard that shows birthdays as sticky notes. Uses MongoDB, Node.js, Express.js and Angular.js.
 
 Demo
 ----
