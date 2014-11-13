@@ -13,9 +13,9 @@ $gold: #EEC81E;
 
 .note-wrap {
   display: inline-block;
-  width: 100%;
   perspective: 200px;
   perspective-origin: center;
+  width: 100%;
 }
 
 .note:before {
@@ -30,15 +30,36 @@ $gold: #EEC81E;
 }
 
 .note {
+  display: block;
+  float: left;
+  width: 300px;
+  margin: 0 0 1em 0;
   padding: 5px;
   box-shadow: 0px 4px 20px black;
-  margin: 0 0 1em 0;
-  width: 300px;
-  float: left;
-  display: block;
   @media (min-width: 768px) { 
     width: 100%;
   }
+}
+
+.note-body {
+  @extend .note-ink;
+  font-size: 9em;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.note-footer {
+  @extend .note-ink;
+  font-size: 2em;
+  font-family: 'Indie Flower', cursive;
+}
+
+.note-ink {
+  color: white;
+  text-align: center;  
+}
+
+.padded-note-content {
+  padding: 1em;
 }
 
 // Note colors
@@ -71,13 +92,9 @@ $gold: #EEC81E;
   background-color: black;
 }
 
-.white {
-  background-color: white;
-}
+// Pattern
 
-// Texture
-
-.no-teture {
+.no-pattern {
 
 }
 
@@ -85,16 +102,14 @@ $gold: #EEC81E;
   background-image: url(#{$img}/crown.png);
 }
 
-// Special
-
-.no-special {
-
-}
-
-// Animations
+// On Enter
 
 .drop {
   -webkit-animation: drop 1 ease-in 0.3s;
+}
+
+.drop-glow {
+  -webkit-animation: glow infinite ease-in 1.3s, drop 1 ease-in 0.3s;
 }
 
 .drop-tilted-right {
@@ -107,6 +122,10 @@ $gold: #EEC81E;
 
 .drop-tilted-left {
   -webkit-animation: drop-tilted-left 1 ease-in 0.3s forwards;
+}
+
+.drop-tilted-left-glow {
+  -webkit-animation:  glow infinite ease-in 1.3s, drop-tilted-left 1 ease-in 0.3s forwards;
 }
 
 @-webkit-keyframes drop {
@@ -149,25 +168,4 @@ $gold: #EEC81E;
   100% {
     transform: translateZ(0px) rotate(-2deg);  
   } 
-}
-
-.note-ink {
-  color: white;
-  text-align: center;  
-}
-
-.note-body {
-  @extend .note-ink;
-  font-size: 9em;
-  font-family: 'Permanent Marker', cursive;
-}
-
-.note-footer {
-  @extend .note-ink;
-  font-size: 2em;
-  font-family: 'Indie Flower', cursive;
-}
-
-.padded-note-content {
-  padding: 1em;
 }

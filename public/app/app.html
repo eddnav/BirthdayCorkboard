@@ -41,7 +41,7 @@
       <div class="row">
         <div ng-repeat="birthday in filteredBirthdays = (birthdays | month:month | orderByDay)">
           <div class="col-sm-6 col-md-3 grid-element-container">
-            <birthday-pinned-note day="{{ getMonthDay(birthday.birthday) }}" name="{{ birthday.name }}" noteOptions='{{ birthday.noteOptions }}'></birthday-pinned-note>
+            <birthday-pinned-note birthday="{{ getMonthDay(birthday.birthday) }}" name="{{ birthday.name }}" noteStyle='{{ birthday.noteStyle }}'></birthday-pinned-note>
           </div>
         </div>
         <div class="empty-container" ng-hide="filteredBirthdays.length">

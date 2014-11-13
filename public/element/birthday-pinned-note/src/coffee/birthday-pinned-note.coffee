@@ -1,8 +1,7 @@
 Polymer
-  day: '?',
+  birthday: '?',
   name: '?',
-  noteOptions:
-    background: 'red',
-    texture: 'no-texture',
-    special: 'no-special',
-    animation: 'drop-tilted-right'
+  noteStyle:
+    color: 'red',
+    pattern: 'no-pattern',
+    onEnter: 'drop-tilted-right'
