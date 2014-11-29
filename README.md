@@ -34,6 +34,7 @@ Every note is a custom element I made while learning Polymer, ie:
 
 Example MongoDB document
 ------------------------
+```javascript
 {
     "_id": {
         "$oid": "54389c84458cf54bfe69cbdf"
@@ -45,3 +46,4 @@ Example MongoDB document
         "onEnter": "drop-tilted-left"
     }
 }
+```
