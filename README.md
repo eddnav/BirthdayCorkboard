@@ -47,3 +47,6 @@ Example MongoDB document
     }
 }
 ```
+License
+-------
+This software is copyrighted and licensed under the MIT license. See the file entitled LICENSE for full copyright and license text.
