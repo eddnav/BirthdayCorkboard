@@ -1,3 +1,7 @@
+Notice
+==================
+This is a very old training app I made, the tools used are on ancient versions by now.
+
 birthday-corkboard
 ==================
 
